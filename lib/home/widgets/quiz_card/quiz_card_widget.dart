@@ -1,5 +1,6 @@
 import 'package:dev_quiz/challenge/challenge_page.dart';
 import 'package:dev_quiz/core/core.dart';
+import 'package:dev_quiz/shared/models/question_mode.dart';
 import 'package:dev_quiz/shared/widgets/progress_indicator/progress_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -7,14 +8,14 @@ class QuizCardWidget extends StatelessWidget {
   final String title;
   final String image;
   final int questionsAnswered;
-  final int totalQuestions;
+  final List<QuestionModel> questions;
 
   const QuizCardWidget(
       {Key? key,
       required this.title,
       required this.image,
       required this.questionsAnswered,
-      required this.totalQuestions})
+      required this.questions})
       : super(key: key);
 
   @override
@@ -23,7 +24,10 @@ class QuizCardWidget extends StatelessWidget {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(builder: (context) {
-          return ChallengePage();
+          return ChallengePage(
+            title: this.title,
+            questions: this.questions,
+          );
         }),
       ),
       child: Container(
@@ -42,7 +46,7 @@ class QuizCardWidget extends StatelessWidget {
             children: [
               Expanded(
                   flex: 1,
-                  child: Text("$questionsAnswered de $totalQuestions",
+                  child: Text("$questionsAnswered de ${this.questions.length}",
                       style: AppTextStyles.body11)),
               Expanded(
                 flex: 2,

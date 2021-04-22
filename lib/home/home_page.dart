@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                               title: quiz.title,
                               image: quiz.image,
                               questionsAnswered: quiz.questionsAnswered,
-                              totalQuestions: quiz.questions.length))
+                              questions: quiz.questions))
                           .toList(),
                     ),
                   )
