@@ -42,7 +42,8 @@ class AnswerWidget extends StatelessWidget {
                             ? _selectedBorderRight
                             : AppColors.border))),
                 child: selected
-                    ? Icon(Icons.check, color: AppColors.white, size: 16)
+                    ? Icon(selected ? _selectedIconRight : Icons.check,
+                        color: AppColors.white, size: 16)
                     : null)
           ],
         ),
