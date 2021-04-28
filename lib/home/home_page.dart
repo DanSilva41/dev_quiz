@@ -58,11 +58,7 @@ class _HomePageState extends State<HomePage> {
                       children: this
                           .controller
                           .quizzes!
-                          .map((quiz) => QuizCardWidget(
-                              title: quiz.title,
-                              image: quiz.image,
-                              questionsAnswered: quiz.questionsAnswered,
-                              questions: quiz.questions))
+                          .map((quiz) => QuizCardWidget(quiz: quiz))
                           .toList(),
                     ),
                   )

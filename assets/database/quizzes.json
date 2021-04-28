@@ -40,6 +40,256 @@
                         "right": true
                     }
                 ]
+            },
+            {
+                "title": "Está curtindo o trabalho?",
+                "answers": [
+                    {
+                        "title": "Estou curtindo",
+                        "right": true
+                    },
+                    {
+                        "title": "Amando trabalhar nesse lugar"
+                    },
+                    {
+                        "title": "Muito top"
+                    },
+                    {
+                        "title": "Show de bola!"
+                    }
+                ]
+            },
+            {
+                "title": "Em qual ano foi o lançamento do PIX?",
+                "answers": [
+                    {
+                        "title": "2016"
+                    },
+                    {
+                        "title": "2021"
+                    },
+                    {
+                        "title": "2019"
+                    },
+                    {
+                        "title": "2020",
+                        "right": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Lógica de Programação",
+        "image": "blocks",
+        "questionsAnswered": 2,
+        "level": "facil",
+        "questions": [
+            {
+                "title": "O que significa o comando printf na linguagem C?",
+                "answers": [
+                    {
+                        "title": "Pare"
+                    },
+                    {
+                        "title": "Escreve",
+                        "right": true
+                    },
+                    {
+                        "title": "Leia"
+                    },
+                    {
+                        "title": "Calcule"
+                    }
+                ]
+            },
+            {
+                "title": "O que significa o comando scanf na linguagem C?",
+                "answers": [
+                    {
+                        "title": "Pare"
+                    },
+                    {
+                        "title": "Escreve"
+                    },
+                    {
+                        "title": "Leia",
+                        "right": true
+                    },
+                    {
+                        "title": "Calcule"
+                    }
+                ]
+            },
+            {
+                "title": "Para a quantidade de produtos no estoque, qual tipo de dados devo utilizar?",
+                "answers": [
+                    {
+                        "title": "char"
+                    },
+                    {
+                        "title": "int"
+                    },
+                    {
+                        "title": "float",
+                        "right": true
+                    },
+                    {
+                        "title": "boolean"
+                    }
+                ]
+            },
+            {
+                "title": "O que é um algoritmo?",
+                "answers": [
+                    {
+                        "title": "Uma sequência infinita de passos, com objetivo de se resolver um problema.",
+                        "right": true
+                    },
+                    {
+                        "title": "Uma sequência de passos alternados"
+                    },
+                    {
+                        "title": "Uma sequência finita de passos, com objetivo de se resolver um problema."
+                    },
+                    {
+                        "title": "Uma declaração de variáveis"
+                    }
+                ]
+            },
+            {
+                "title": "Escolha a alternativa que não é um exemplo de algoritmo.",
+                "answers": [
+                    {
+                        "title": "Fluxograma"
+                    },
+                    {
+                        "title": "Programa em Linguagem C"
+                    },
+                    {
+                        "title": "Português Estruturado"
+                    },
+                    {
+                        "title": "Variáveis do tipo inteiro",
+                        "right": true
+                    }
+                ]
+            },
+            {
+                "title": "Para uma variável nome completo de um aluno, qual será o tipo de dados?",
+                "answers": [
+                    {
+                        "title": "cadeia de caracteres",
+                        "right": true
+                    },
+                    {
+                        "title": "caractere"
+                    },
+                    {
+                        "title": "real"
+                    },
+                    {
+                        "title": "inteiro"
+                    }
+                ]
+            },
+            {
+                "title": "Qual dos códigos abaixo corresponde uma saída/exibição CORRETA em linguagem C",
+                "answers": [
+                    {
+                        "title": "print(''Olá Mundo''"
+                    },
+                    {
+                        "title": "printf(Olá Mundo);"
+                    },
+                    {
+                        "title": "escreva(''Olá Mundo'');"
+                    },
+                    {
+                        "title": "print(''Olá Mundo'');",
+                        "right": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "#Surpresa",
+        "image": "blocks",
+        "questionsAnswered": 0,
+        "level": "perito",
+        "questions": [
+            {
+                "title": "Quantos planetas Terra cabem dentro do Sol?",
+                "answers": [
+                    {
+                        "title": "Um milhão",
+                        "right": true
+                    },
+                    {
+                        "title": "Cem"
+                    },
+                    {
+                        "title": "Seiscentos"
+                    },
+                    {
+                        "title": "Cento de cinquenta"
+                    }
+                ]
+            },
+            {
+                "title": "Em que lugar vivem mais cangurus do que pessoas?",
+                "answers": [
+                    {
+                        "title": "Indonésia"
+                    },
+                    {
+                        "title": "Nova Zelândia"
+                    },
+                    {
+                        "title": "Austrália",
+                        "right": true
+                    },
+                    {
+                        "title": "África do Sul"
+                    }
+                ]
+            },
+            {
+                "title": "O que mede a Escala Mercalli?",
+                "answers": [
+                    {
+                        "title": "A intensidade dos ventos"
+                    },
+                    {
+                        "title": "A intensidade sísmica de acordo com os danos provocados",
+                        "right": true
+                    },
+                    {
+                        "title": "A resistência dos minerais"
+                    },
+                    {
+                        "title": "A magnitude de um terremoto"
+                    }
+                ]
+            },
+            {
+                "title": "Quanto mede uma girafa?",
+                "answers": [
+                    {
+                        "title": "Entre 4,8 e 5,5 metros",
+                        "right": true
+                    },
+                    {
+                        "title": "2 metros"
+                    },
+                    {
+                        "title": "Entre 5 e 6 metros"
+                    },
+                    {
+                        "title": "2,5 metros"
+                    }
+                ]
             }
         ]
     }
