@@ -6,7 +6,7 @@ class AnswerWidget extends StatelessWidget {
   final AnswerModel answer;
   final bool selected;
   final bool disabled;
-  final VoidCallback onTap;
+  final ValueChanged<bool> onTap;
 
   const AnswerWidget(
       {Key? key,
@@ -23,7 +23,9 @@ class AnswerWidget extends StatelessWidget {
       child: IgnorePointer(
         ignoring: this.disabled,
         child: GestureDetector(
-          onTap: onTap,
+          onTap: () {
+            this.onTap(this.answer.right);
+          },
           child: Container(
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(

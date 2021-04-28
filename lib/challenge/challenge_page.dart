@@ -2,6 +2,7 @@ import 'package:dev_quiz/challenge/challenge_controller.dart';
 import 'package:dev_quiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:dev_quiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:dev_quiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:dev_quiz/result/result_page.dart';
 import 'package:dev_quiz/shared/models/quiz_model.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,8 @@ class _ChallengePageState extends State<ChallengePage> {
             .widget
             .quiz
             .questions
-            .map((e) => QuizWidget(question: e, onChange: this.nextPage))
+            .map((e) =>
+                QuizWidget(question: e, onSelected: this.verifyCorrectAnswer))
             .toList(),
         physics: NeverScrollableScrollPhysics(),
       ),
@@ -79,7 +81,20 @@ class _ChallengePageState extends State<ChallengePage> {
                         Expanded(
                             child: NextButtonWidget.green(
                                 label: 'Finalizar',
-                                onTap: () => Navigator.maybePop(context))),
+                                onTap: () => Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ResultPage(
+                                              titleQuiz: this.widget.quiz.title,
+                                              correctQuestions: this
+                                                  .challengeControler
+                                                  .quantityCorrectQuestions,
+                                              totalQuestions: this
+                                                  .widget
+                                                  .quiz
+                                                  .questions
+                                                  .length,
+                                            ))))),
                     ],
                   )),
         ),
@@ -93,7 +108,10 @@ class _ChallengePageState extends State<ChallengePage> {
       this
           .pageController
           .nextPage(duration: Duration(milliseconds: 10), curve: Curves.linear);
-    else
-      Navigator.maybePop(context);
+  }
+
+  void verifyCorrectAnswer(bool value) {
+    if (value) this.challengeControler.quantityCorrectQuestions++;
+    this.nextPage();
   }
 }
